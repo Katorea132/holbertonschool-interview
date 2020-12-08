@@ -3,8 +3,11 @@
 
 def canUnlockAll(boxes):
     lili = [0]
+    leng = len(boxes)
+    numberlist = {0: 0}
     for box in lili:
         for key in boxes[box]:
-            if key not in lili and key < len(boxes):
+            if key not in numberlist and key < leng:
+                numberlist[key] = ':)'
                 lili.append(key)
-    return len(boxes) == len(lili)
+    return leng == len(lili)
