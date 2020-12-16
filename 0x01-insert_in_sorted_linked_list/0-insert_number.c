@@ -20,14 +20,15 @@ listint_t *insert_node(listint_t **head, int number)
 		return (0);
 	new->n = number;
 
-	if ( !*head ||number < h->n)
+	if (!h || number < h->n)
 	{
 		new->next = h;
+		h = new;
 		return (new);
 	}
 	for (; h->next; h = h->next)
 	{
-		if (number < h->next->n && number >= h->n)
+		if (number < h->next->n)
 		{
 			new->next = h->next;
 			h->next = new;
