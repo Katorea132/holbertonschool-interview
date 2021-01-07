@@ -2,6 +2,7 @@
 """Documentation, right.
 """
 
+
 def minOperations(n):
     """Calculates minimum amount of operations
 
